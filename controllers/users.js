@@ -3,6 +3,6 @@ const fn_hello = async (ctx, next) => {
   ctx.response.body = `<h1>Hello, ${name}!</h1>`;
 };
 
-module.exports = {
+export default {
   "GET /hello/:name": fn_hello
 };
