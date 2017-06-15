@@ -23,10 +23,9 @@ function addControllers(router, dir) {
   let js_files = files.filter(f => {
     return f.endsWith(".js");
   });
-
   for (let f of js_files) {
     console.log(`process controller: ${f}...`);
-    let mapping = require(__dirname + "/controllers/" + f);
+    let mapping = require(__dirname + "/" + dir + "/" + f);
     addMapping(router, mapping);
   }
 }
